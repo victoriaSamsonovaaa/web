@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul.countries {
+            columns: 3;
+            margin-top: 10px;
+        }
+        li.countries{
+            display: inline-block;
+            vertical-align: top;
+            padding-left: 5px;  
+        }
+        .countries li {
+            margin-bottom: 10px;
+        }
+        body {
+            margin: 0; /* Remove default margin */
+            background-color: rgb(255, 245, 238);
+            font-family: 'Nanum Gothic', sans-serif;
+            color: darkslategrey;
+        }
+        .header {
+            width: 100%; /* Make header full width */
+            position: relative; /* Position relative for absolute positioning */
+        }
+        .header h1 {
+            margin: 0;
+            color: black;
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+            font-size: 80px;
+            position: absolute; /* Position absolute for overlay */
+            top: 30%; /* Place at vertical center */
+            left: 34vw; /* Place at horizontal center */
+            transform: translate(-50%, -50%); /* Centering trick */
+        }
+        .photo {
+            width: 100%; /* Maintain aspect ratio */
+            height:auto; /* Set desired height */
+            display: block;
+            margin: 0 auto; /* Center horizontally */
+        }
+        .content {
+            margin: 0 auto; /* Center content */
+            max-width: 1200px;
+            padding: 0 20px; 
+        }
+        h2.discover {
+            text-align: center;
+            margin-left: -7%;
+            margin-right: 50%;
+            margin-top: 6vw;
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 46px;
+            color:#C49BDB;
+        }
+        p.discover {
+            margin-left: 5%;
+            margin-right: 40%;
+            margin-top: 2vw;
+            font-size: 22px;
+            font-family: 'PT Sans Narrow', sans-serif;
+            color: rgb(105,105,105);
+        }
+        div.offers {
+            margin-left: 24vw;
+            font-size: 22px;
+            margin-top: 2vw;
+            margin-right: 5%;
+            font-family: 'PT Sans Narrow', sans-serif;
+            color: rgb(105,105,105);
+
+        }
+        .offers h2 {
+            margin-top: 10vw;
+            margin-left: 5%;
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 46px;
+            color:#C49BDB;
+        }
+        h2.dest {
+            text-align: center;
+            margin-top: 10vw;
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 46px;
+            color:#C49BDB;
+        }
+        p.dest {
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 2vw;
+            font-size: 22px;
+            font-family: 'PT Sans Narrow', sans-serif;
+            color: rgb(105,105,105);
+        }
+        .a li {
+            font-weight: 900;
+            font-family: 'Nanum Gothic', sans-serif;
+            color: darkslategrey;
+        }
+        .countries {
+            font-size: 24px;
+            margin-left: 4vw;
+            margin-top: 3vw;
+            margin-bottom: 6vw;
+            font-family: 'PT Sans Narrow', sans-serif;
+            color: darkslategrey;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <img src="sources/14.png" class="photo" alt="Travel Agency Photo">
+        <h1>World Travel Agency</h1>
+    </div>
+    <div class="content">
+        <h2 class="discover">Discover the way!</h2>
+    <p class="discover">Nestled in the bustling heart of downtown, World Travel Agency stands as a beacon for intrepid travelers seeking to explore the far corners of our extraordinary world. With a steadfast commitment to excellence and a boundless passion for discovery, we invite you to embark on a journey of a lifetime with us.
+        World Travel Agency, we believe that travel is not merely about crossing destinations off a bucket list. Whether you yearn for the opulent tranquility of a secluded island retreat, the pulse-pounding excitement of a rugged wilderness expedition, or the enchanting allure of a cultural odyssey through ancient cities and historic landmarks, we are here to transform your wanderlust into reality.</p>
+
+    <a name = "offers"></a>
+    <div class="offers"><h2>Services Offered</h2>   
+        <p>
+            <ul type = "disc" class="a">
+                <li>Personalized Itinerary Planning</li>
+                <p>From the moment you connect with us, our seasoned travel consultants will embark on a collaborative journey with you, delving deep into your travel aspirations, preferences, and interests to design a bespoke itinerary that reflects your unique vision</p>
+            </ul>
+        
+            <ul type = "disc" class="a">
+                <li>Flight and Accommodation Arrangements</li>
+                <p> Let us take the hassle out of travel logistics. With access to an extensive network of airlines, hotels, and resorts worldwide, we'll secure the best deals on flights and accommodations tailored to your budget and preferences, ensuring a seamless and comfortable journey every step of the way.</p>
+            </ul>
+        
+            <ul type = "disc" class="a">
+                <li>Experiential Tours and Activities</li>
+                <p> Embark on a voyage of discovery with our handcrafted selection of immersive tours and activities. Whether you're craving adrenaline-pumping adventures, cultural excursions, culinary delights, or serene nature escapes, our curated experiences promise to awaken your senses and leave an indelible imprint on your soul.</p>
+            </ul>
+        
+            <ul type = "disc" class="a">
+                <li>Travel Insurance and Visa Assistance</li>
+                <p>Your safety and peace of mind are our utmost priorities. Allow our dedicated team to guide you through the intricacies of travel insurance options and visa requirements, ensuring that you're fully prepared for your upcoming adventure with comprehensive coverage and hassle-free documentation.
+                </p>
+            </ul>
+        
+            <ul type = "disc" class="a">
+                <li>24/7 Concierge Support</li>
+                <p>From the moment you book your journey to the instant you return home, our round-the-clock concierge team stands ready to provide unwavering support and assistance. Whether you have questions, need recommendations, or encounter unforeseen challenges along the way, rest assured that we're here for you every step of the way.</p>
+            </ul>
+        </p></div>
+    
+  
+
+    <h2></h2>
+    <a name = "dest"></a>
+    <h2 class="dest">Destinations near and far, we do it all</h2>
+    <p class="dest">We provide additional value and add no additional cost. We are paid by the travel vendors and suppliers.
+        We save you time. We provide research, support and advice not available to mass market online travel booking.
+        We are inquisitive and resourceful-Our goal is to have a complete understanding of your travel style, needs and objectives in order to enhance and enrich your travel experiences.
+        We are Virtuoso Travel Advisors– We enjoy sharing our global travel experiences, but offer much more through our affiliation with the Virtuoso travel network. Through this global network of top-notch travel suppliers, we provide expertise and connections that provide more value for your travel budget and travel offers that you simply won’t get on your own.    </p>
+            <ul type = "disc" class="countries"> 
+                <li>
+                    Italy
+                </li>
+                <li>
+                    France
+                </li>
+                <li>
+                    Greece
+                </li>
+                <li>
+                    Germany
+                </li>
+                <li>
+                    Austria
+                </li>
+                <li>
+                    Canada
+                </li>
+                <li>
+                    Morocco
+                </li>
+                <li>
+                    Portugal
+                </li>
+                <li>
+                    Ghana
+                </li>
+                <li>
+                    South Africa
+                </li>
+                <li>
+                    Japan
+                </li>
+                <li>
+                    China
+                </li>
+                <li>
+                    Thailand
+                </li>
+                <li>
+                    South Korea
+                </li>
+                <li>
+                    Vietnam
+                </li>
+            </ul>
+
+</body>
+</html>
