@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+
+  .wrapper {
+    display: flex;  
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center; 
+  }
+  body {
+    background-color: rgb(255, 245, 238);
+    margin: 0;
+    padding: 0;
+  }
+
+  #header {
+      color: #C49BDB;
+      font-size: 66px;
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      margin-top: 2px;
+      text-align: right;
+      flex: 0 0 auto;
+      width: 100%;
+  }
+
+  .text {
+      font-family: 'PT Sans Narrow', sans-serif;
+      color: rgb(105, 105, 105);
+      font-size: 16pt;
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      text-wrap: balance; 
+  }
+  
+  a.countries {
+      font-size: 30px;
+      text-decoration: none;
+      color:#C49BDB;
+      font-family: 'PT Sans Narrow', sans-serif;
+  }
+
+  a.countries:hover {
+      color: #320b49;
+    }
+
+    h2{
+        color: #C49BDB;
+        font-family: 'PT Sans Narrow', sans-serif;
+        font-size: 58px;
+        margin-left: 20px;
+    }
+   
+    #footer {
+        color: #5a4865;
+        text-align: center;
+        font-family: 'PT Sans Narrow', sans-serif;  
+        font-size: 20px;
+        margin-top: 2vw;
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    #photo {
+    max-width: 300px;
+    height: auto;
+    margin-left: 28px;
+    }
+
+
+  /* We tell all items to be 100% width, via flex-basis */
+  /* .wrapper > * {
+    padding: 10px;
+    flex: 1 100%;
+  }
+   */
+  
+  .main {
+    text-align: left;
+  }
+  
+  #aside-1 {
+   text-align: center;
+
+  }
+  
+  /* We rely on source order for mobile-first approach
+   * in this case:
+   * 1. header
+   * 2. article
+   * 3. aside 1
+   * 4. aside 2
+   * 5. footer
+   */
+  
+  
+  /* Large screens */
+  @media only screen and (min-width: 800px) {
+
+    .main    { flex: 3 0px; }
+    #aside-1 {  order: 1; width: 16%; 
+                position: relative;
+                padding-top: 8%;
+                
+    } 
+
+    .main    { order: 2; }
+    #footer  { order: 3; }
+    #photo {
+        float: right;
+        margin: 20px ;
+        max-width: 460px;
+        height: auto;
+    }
+  }
+  
+  body {
+    padding: 2em; 
+  }
+  
+</style>
+  
+<link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+  
+<body>
+  <div class="wrapper">
+    <h1 id="header">World Travel Agency</h1>
+    <div class="main">
+      <div id="title"><h2>Provence, France</h2></div>
+      <div id="description">     
+        <img src="sources/provence.jpg" alt="Provence" id="photo">       
+        <p class="text">Provence, located in the southeastern region of France, is a place of timeless beauty and undeniable charm. Known for its picturesque landscapes, rich history, and vibrant culture, Provence has captivated the hearts of travelers for centuries.
+            One of the defining features of Provence is its breathtaking natural scenery. From rolling lavender fields to rugged coastal cliffs, the region offers a diverse range of landscapes that have inspired countless artists, writers, and poets. The vibrant colors and sweet scent of lavender permeate the air, creating a truly enchanting atmosphere.
+            With a heritage dating back to ancient times, Provence has been shaped by various civilizations, including the Roman, Greek, and medieval influences.</p>
+        <p class="text">This rich history is evident in the region's architecture, with charming villages and towns adorned with narrow cobblestone streets, medieval castles, and grand cathedrals. Exploring these historic sites is like stepping back in time and experiencing the region's past firsthand.
+            In addition to its natural beauty and historical sites, Provence is also renowned for its culinary delights. The region is famous for its fresh produce, aromatic herbs, and world-class wines. Indulge in the local cuisine, savoring dishes like bouillabaisse, ratatouille, and tarte tropézienne, while enjoying a glass of rosé from one of the many vineyards.
+            Whether you're strolling through the vibrant markets of Aix-en-Provence, exploring the stunning calanques along the coast, or simply relaxing in a charming café with a view of the lavender fields, Provence offers a truly unforgettable experience.
+            Plan your trip to Provence today and immerse yourself in the beauty and charm of this remarkable region.</p>
+      </div>
+    </div>
+    <div id="aside-1">
+            <a class="countries" href="https://ru.wikipedia.org/wiki/Италия">Italy</a> <br />
+            <a class="countries" href="https://ru.wikipedia.org/wiki/Франция">France</a> <br />
+            <a class="countries" href="https://en.wikipedia.org/wiki/Canada">Canada</a> <br />
+            <a class="countries" href="https://ru.wikipedia.org/wiki/Япония">Japan</a> <br />
+            <a class="countries" href="https://ru.wikipedia.org/wiki/Австрия">Austria</a> <br />
+            <a class="countries" href="https://ru.wikipedia.org/wiki/Турция">Turkey</a> <br />
+            <a class="countries" href="https://ru.wikipedia.org/wiki/Объединённые_Арабские_Эмираты">UAE</a> <br />
+            <a class="countries" href="https://ru.wikipedia.org/wiki/Марокко">Marocco</a> <br />
+    </div>
+    <div id="footer">2024 World Travel Agency. All rights are reserved.</div>
+</div>
+</body>
+</html>

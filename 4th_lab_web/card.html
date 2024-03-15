@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="card.js"></script>
+<style> 
+    html {
+        height: 100%;
+        width: 100%;
+        margin: 0px;
+    }
+
+    body {
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        height: 100%;
+        width: 100%;
+        margin: 0px;
+        background-color: rgb(255, 245, 238);
+    }
+
+    #wrapper {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    input {
+        font-family: 'PT Sans Narrow', sans-serif;  
+        letter-spacing: 1px;
+        font-size: 12px;
+        text-decoration: none;
+        color: rgb(255, 245, 238);
+        border: 0px;
+        padding: 10px 10px 8px 10px;
+        background-color: #C49BDB;
+    }
+
+    input:hover {
+        font-family: 'PT Sans Narrow', sans-serif;  
+        letter-spacing: 1px;
+        font-size: 12px;
+        text-decoration: none;
+        color: rgb(105, 105, 105);
+        border: 0px;
+        background-color: #320b49;
+    }
+     
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+<body>
+    <div id="wrapper">
+        <input onclick="Add_tour_button();" value="Adding information about tour" type="button" />
+        <input onclick="Remove_tour_button();" value="Removing information about tour" type="button" />
+        <input onclick="Get_Tour_Info();" value="Information about tuor" type="button" />
+        <input onclick=" List_All_Tours();" value="List of all tours" type="button" />
+    </div>
+</body>
+</html>
