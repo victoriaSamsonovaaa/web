@@ -39,6 +39,7 @@
       flex-grow: 1;
       display: flex;
       flex-direction: column;
+      text-wrap: balance; 
   }
   
   a.countries {
@@ -87,7 +88,8 @@
   }
   
   #aside-1 {
-   text-align: left;
+   text-align: center;
+
   }
   
   /* We rely on source order for mobile-first approach
@@ -104,12 +106,17 @@
   @media only screen and (min-width: 800px) {
 
     .main    { flex: 3 0px; }
-    #aside-1 { order: 1; width: 16%; } 
+    #aside-1 {  order: 1; width: 16%; 
+                position: relative;
+                padding-top: 8%;
+                
+    } 
+
     .main    { order: 2; }
     #footer  { order: 3; }
     #photo {
         float: right;
-        margin: 10px 20px ;
+        margin: 20px ;
         max-width: 460px;
         height: auto;
     }

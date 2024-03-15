@@ -49,7 +49,7 @@ function Add_tour_button() {
         tour_Price= prompt("Input price of the tour: ", undefined);
     }
 
-    storage.Add(tour_country, tour_Price);
+    Storage.Add(tour_country, tour_Price);
     
 }
 
@@ -59,8 +59,8 @@ function Remove_tour_button() {
         tour_country = prompt("Input name of the removing country: ", undefined);
     }
 
-    if (storage.Get(tour_country)) {
-        storage.Delete(tour_country);
+    if (Storage.Get(tour_country)) {
+        Storage.Delete(tour_country);
     }
     else {
         alert("No any tours in this country!");
@@ -75,7 +75,7 @@ function Get_Tour_Info() {
         tour_country = prompt("Input name of the country: ", undefined);
     }
 
-    const tourInfo = storage.Get(tour_country);
+    const tourInfo = Storage.Get(tour_country);
 
     if (tourInfo) {
         console.log("Information about " + tour_country + ": " + tourInfo);
@@ -86,14 +86,14 @@ function Get_Tour_Info() {
 }
 
 function List_All_Tours() {
-    const keys = storage.GetKeys();
+    const keys = Storage.GetKeys();
     if (keys.length === 0) {
         console.log("No tours available.");
     }
     else {
         console.log("Available tours:");
         keys.forEach(key => {
-            console.log(key + ": " + storage.GetValue(key));
+            console.log(key + ": " + Storage.Get(key));
         });
     }
 }
