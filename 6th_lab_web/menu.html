@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(255, 245, 238);
+        }
+    
+        #menuContainer {
+            top: 30%;
+            left: 70%;
+            position: absolute;
+            transform: translate(-50%, 50%);
+            width: 1600px;
+        }
+    
+        .parent-element {
+            display: inline-block;
+            position: relative;
+            margin-right: 120px;
+            margin-bottom: 7px;
+        }
+    
+        .child-element {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            z-index: 1;
+        }
+    
+        .menu-item {
+            font-family: 'PT Sans Narrow', sans-serif;  
+            letter-spacing: 2px;
+            font-size: 24px;
+            text-decoration: none;
+            color: rgb(255, 245, 238);
+            background-color: #C49BDB;
+            border: 0px;
+            padding: 10px 10px 8px 10px;
+            cursor: pointer;
+        }
+    
+        .menu-item:hover {
+            color: rgb(105, 105, 105);
+            background-color: #320b49;
+        }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="menuContainer"></div>
+        <script>
+            var MenuA = [
+                {name: 'Destinations', submenu: [
+                    {name: 'Europe', submenu: 
+                        [
+                            {name: 'Austria', url:'https://en.wikipedia.org/wiki/Austria'},
+                            {name: 'Italy', url:'https://en.wikipedia.org/wiki/Italy'},
+                            {name: 'France', url:'https://en.wikipedia.org/wiki/France'},
+                            {name: 'Spain', url:'https://en.wikipedia.org/wiki/Spain'}
+                        ]},
+                    {name: 'Asia', submenu: 
+                        [
+                            {name: 'Thailand', url:'https://en.wikipedia.org/wiki/Thailand'},
+                            {name: 'China', url:'https://en.wikipedia.org/wiki/China'},
+                            {name: 'Japon', url:'https://en.wikipedia.org/wiki/Japon'},
+                            {name: 'Indonesia', url:'https://en.wikipedia.org/wiki/Indonesia'},
+                            {name: 'Philippines', url:'https://en.wikipedia.org/wiki/Philippines'},
+                            {name: 'Vietnam', url:'https://en.wikipedia.org/wiki/Vietnam'}
+                        ]},
+                    {name: 'USA', url:'https://en.wikipedia.org/wiki/United_States'},
+                    {name: 'Africa', submenu: 
+                        [
+                            {name: 'Morocco', url:'https://en.wikipedia.org/wiki/Morocco'},
+                            {name: 'Tunisia', url:'https://en.wikipedia.org/wiki/Tunisia'},
+                            {name: 'Egypt', url:'https://en.wikipedia.org/wiki/Egypt'}
+                        ]},
+                ]},
+
+                {name: 'Photos', url:'https://www.pinterest.com/search/pins/?q=vacation%20landscapes&rs=typed'},
+
+                {name: 'Profitable offers', submenu: [
+                    {name: 'Countries'},
+                    {name: 'Mountains'},
+                    {name: 'Jungles'}
+                ]},
+
+                {name: 'About us', submenu: [
+                    {name: 'Call us'},
+                    {name: 'Text us', submenu: [
+                        {name: "email"},
+                        {name: 'fax'}
+                    ]},
+                    {name: 'Where u can find us'},
+                    {name: 'FAQ'}
+                ]}
+            ];
+
+            function ShowMenu(MenuItems, ParentElem) {
+            MenuItems.forEach(item => {
+                var parentElement = document.createElement('div');
+                parentElement.className = 'parent-element';
+
+                var menuItem = document.createElement('div');
+                menuItem.className = 'menu-item';
+                menuItem.innerHTML = item.name;
+
+                menuItem.onclick = function(e) {
+                    e.stopPropagation();
+                    if (item.submenu) {
+                        var childElement = document.createElement('div');
+                        childElement.className = 'child-element';
+
+                        childElement.style.top = menuItem.offsetHeight + 'px';
+                        childElement.style.left = menuItem.offsetWidth + 'px';
+                        childElement.style.display = 'block';
+
+                        if (parentElement.lastChild.className != 'child-element') {
+                            parentElement.appendChild(childElement);
+                            ShowMenu(item.submenu, childElement);
+                        }                                                 
+                    } 
+                    else {
+                        window.location.href = item.url;
+                    }
+                };
+
+                parentElement.appendChild(menuItem);
+
+                if (ParentElem) {
+                    ParentElem.appendChild(parentElement);
+                    
+                } 
+                else {
+                    document.getElementById('menuContainer').appendChild(parentElement);
+                }});
+            }
+
+            ShowMenu(MenuA);
+        </script>
+</body>
+</html> 
