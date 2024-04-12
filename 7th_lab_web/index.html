@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+            background-color: rgb(255, 245, 238);
+        }
+    
+        h2 {
+            color: #C49BDB;
+            font-size: 52px;
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+            margin-top: 2px;
+            text-align: center;
+            flex: 0 0 auto;
+            width: 100%;
+        }
+
+        p {
+            font-family: 'PT Sans Narrow', sans-serif;
+            color: rgb(105, 105, 105);
+            font-size: 16pt;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            text-wrap: balance; 
+        }
+    
+        button {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 30px;
+            text-decoration: none;
+            color:aliceblue;
+            font-family: 'PT Sans Narrow', sans-serif;
+            background-color: #C49BDB;
+            }
+    
+            button:hover {
+                color: #320b49;
+            }
+    
+            .container {
+                max-width: 800px;
+                margin: 50px auto;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                font-family: 'PT Sans Narrow', sans-serif;
+                font-size: 20px;;
+            }
+    </style> 
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+<body>
+<div class="container" id='IPage'></div>
+<script>
+    "use strict";
+    
+    window.onhashchange=switchToStateFromURLHash;
+    
+    var SPAState={};
+
+    function switchToStateFromURLHash() {
+        var URLHash = window.location.hash;
+         // убираем из закладки УРЛа решётку
+        var stateStr = URLHash.substr(1);
+    
+        if (stateStr !== "") {
+            SPAState = {pagename: stateStr};
+        } else {
+            SPAState = {pagename: 'Main'};
+        }
+        console.log('Новое состояние приложения:');
+        console.log(SPAState);
+    
+        renderPage();
+    }
+    
+    function renderPage() {
+        var pageHTML="";
+        switch ( SPAState.pagename ) {
+          case 'Main':
+            pageHTML+="<h2>Welcome to the world of our agency!</h2>";
+            pageHTML+="<p>In 2009, we started as a small travel agency in New York, specializing in domestic trips. With the advent of international air travel, it expanded globally. Today, it's a global agency, known for personalized services and a wide range of travel options.</p>";   
+            pageHTML += "<button onclick='switchToPage(\"Services\")'>Services</button>";      
+            break;
+          case 'Services':
+            pageHTML+="<h2>About services</h2>";
+            pageHTML+="<p>Looking to plan the perfect getaway? Look no further! Our travel agency is your one-stop shop for all your travel needs. We specialize in creating unforgettable experiences tailored just for you.</p>";
+            pageHTML+="<p>Whether you're dreaming of a tropical beach vacation, an adventure-filled expedition, or a cultural exploration, we've got you covered. Our services include booking your transportation, securing your accommodations, and arranging exciting tours and activities at your destination.</p>";
+            pageHTML+="<button onclick='switchToPage(\"Main\")'>Main page</button>";
+            break;
+        }
+    
+        document.getElementById('IPage').innerHTML=pageHTML;
+    }
+    
+    function switchToPage(page) {
+        window.location.hash = page;
+        renderPage();
+    }
+    
+    switchToStateFromURLHash();
+    
+</script>
+    
+</body>
+</html>
