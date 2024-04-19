@@ -1,0 +1,33 @@
+
+{
+    "menu": {
+      "countries": [
+        {
+          "name": "Al-Kuwait",
+          "amountOfNights": 12,
+          "description": "Kuwait is known for its petroleum reserves, which are among the world's largest, and its economy is heavily dependent on the oil industry."
+        },
+        {
+          "name": "Tokio",
+          "amountOfNights": 10,
+          "description": "Tokyo is famous for its bustling city life, cutting-edge technology, and rich history and culture."
+        },
+        {
+          "name": "Rome",
+          "amountOfNights": 5,
+          "description": "Located in the central-western portion of the Italian Peninsula, Rome is famous for its rich history, stunning architecture, and cultural significance."
+        },
+        {
+          "name": "Paris",
+          "amountOfNights": 7,
+          "description": "Paris is famous for its iconic landmarks, world-class museums, art galleries, fashion, and gastronomy."
+        },
+        {
+          "name": "Rotterdam",
+          "amountOfNights": 6,
+          "description": "It is the second-largest city in the Netherlands and one of the largest ports in the world. Rotterdam is known for its modern architecture, bustling port, and vibrant cultural scene."
+        }
+      ]
+    }
+  }
+  
